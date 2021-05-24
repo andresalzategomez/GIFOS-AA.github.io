@@ -164,4 +164,5 @@ const footer = docum.getElementById('footer');
 const face = docum.getElementById('facebook');
 const twtt = docum.getElementById('twitter');
 const inst = docum.getElementById('instagram');
+const spanMenu = docum.querySelectorAll(".spanMenu");
 

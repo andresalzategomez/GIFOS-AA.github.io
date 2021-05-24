@@ -9,9 +9,17 @@ menuModoNocturno.onclick = ()=>{
         headerLinea.style.backgroundColor = "blue";
         footerLinea.style.backgroundColor = "blue";
         
-        itemA.forEach(function(element) {
-            element.style.backgroundColor = "white";
-        });
+        console.log(window.matchMedia("(max-width: 1330px)").matches);
+        if(window.matchMedia("(max-width: 930px)").matches) {
+            itemA.forEach(function(element) {
+                element.style.background = "blue";
+                element.style.color = "white";
+            });
+        }else{
+            itemA.forEach(function(element) {
+                element.style.background = "white";
+            });
+        }
         
         itemLI1.onmouseover = function(){
             itemLI1.style.borderBottom= "5px solid blue";
@@ -34,10 +42,23 @@ menuModoNocturno.onclick = ()=>{
             itemLI3.style.borderBottom= "none";
         }
 
+        spanMenu.forEach(function(element) {
+            element.style.background = "blue";
+        });
+
         menuHeader.style.background = "white";
-        menuModo.style.color = "blue";
-        menuFav.style.color = "blue";
-        menuGif.style.color = "blue";
+        if(!window.matchMedia("(max-width: 1330px)").matches) 
+        {
+            menuModo.style.color = "blue";
+            menuFav.style.color = "blue";
+            menuGif.style.color = "blue";
+            
+        }else
+        {
+            menuModo.style.color = "white";
+            menuFav.style.color = "white";
+            menuGif.style.color = "white";
+        }
         divBuscar.style.border = "1px solid blue";
         inputBuscar.style.backgroundColor = "white";
         inputBuscar.style.color = "blue";
@@ -94,7 +115,8 @@ menuModoNocturno.onclick = ()=>{
     footerLinea.style.backgroundColor = "black";
 
     itemA.forEach(function(element) {
-        element.style.backgroundColor = "#37383C";
+        element.style.background = "black";
+        // element.style.color = "white";
     });
 
     itemLI1.onmouseover = function(){
@@ -117,6 +139,10 @@ menuModoNocturno.onclick = ()=>{
     itemLI3.onmouseout = function(){
         itemLI3.style.borderBottom= "none";
     }
+
+    spanMenu.forEach(function(element) {
+        element.style.background = "white";
+    });
     
     menuHeader.style.backgroundColor = "#37383C";
     menuModo.style.color = "white";

@@ -18,6 +18,7 @@ async function getTrending ()
     const trendingData = await checkStatusAndParse(respuestaTrending);
     dataJsonTrending = trendingData;
     
+    console.log(window.matchMedia("(max-width: 1330px)").matches);
     if(window.matchMedia("(max-width: 1330px)").matches) {
       cargarGifoTrendingMobile(dataJsonTrending.data, 0, 25);
       validarFavoritos(0);

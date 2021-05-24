@@ -34,7 +34,8 @@ header nav {
 }
 header nav .menu ul {
     /*posicion absolute para que se posicione debajo del resto del header - top medida del header*/
-    width: 50%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     overflow: hidden;
     list-style: none;
@@ -42,8 +43,9 @@ header nav .menu ul {
     opacity: 0.8;
     color: white;
     height: 0px;
-    right: 210px;
+    right: 0;
     transition: height 0.5s ease;
+    text-align: center;
 }
 header nav .menu  ul li {
     position: relative;
@@ -97,7 +99,7 @@ header nav .menu span {
     height: 2.5px;
     margin-bottom: 6.5px;
     position: relative;
-    background: #000;
+    background: $color-principal;
     z-index: 1;
     transform-origin: 3px 0px;
     transition: transform 0.5s ease,
