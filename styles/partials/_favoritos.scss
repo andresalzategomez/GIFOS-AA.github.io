@@ -1,0 +1,116 @@
+.crearGifoContenedor
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    .crearGifoContenedorInterno1
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: 20%;
+        margin-bottom: 10px;
+        
+        .imagenCamara
+        {
+            width: 200px;
+        }
+
+        .crearGifoRecuadro
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 390px;
+            border: 1px solid blue;
+            
+            .crearGifoTextoRecuadro
+            {
+                color: blue;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .texto_verde_busqueda
+            {
+                color: $color-verde-texto;
+            }
+            .CrearGifosTextoNegro
+            {
+                margin-top: 5px;
+                color: black;
+                font-size: 16px;
+                font-weight: normal;
+            }
+        }
+    }
+
+
+    .crearGifoContenedorInterno2
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .imagenPelicula
+        {
+            position: absolute;
+            right: 10%;
+            bottom: 70px;
+        }
+
+        .crearGifoContenedorCirculos
+        {
+            width: 50%;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            // border: 1px solid blue;
+
+            .CrearGifoCirculo
+            {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid blue;
+                margin-top: 20px;
+                margin-left: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                color: blue;
+                text-align: center;
+            }
+        }
+        
+    }
+
+    .crearGifoLineaAzul
+    {
+        width: 60%;
+        margin-top: 30px;
+        height: 7px;
+        background-color: blue;
+        border-radius: 7px;
+    }
+
+    .botonCrearGifo
+    {
+        width: 150px;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 25px;
+        border: 1px solid blue;
+        background-color: white;
+        font-size: 13px;
+        font-weight: bold;
+        color: blue;
+    }
+}

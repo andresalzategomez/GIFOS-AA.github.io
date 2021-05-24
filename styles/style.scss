@@ -1,0 +1,712 @@
+@import "./partials/variables";
+@import "./partials/header";
+@import "./partials/modal";
+@import "./partials/prueba";
+// @import "./partials/favoritos";
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: $fuente-principal;
+}
+
+body
+{
+    background-color: $color-diurno;
+    max-width: 1440px;
+    margin: auto;
+}
+.header_lineaAzul
+{
+    width: 100%;
+    height: 5px;
+    background-color: blue;
+}
+
+.footer_lineaAzul
+{
+    width: 100%;
+    height: 5px;
+    background-color: blue;
+}
+
+.contenedor_busqueda
+{
+    display: flex;  // Debe ser none cuándo se muestren mis favoritos
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    width: 80%;
+
+    #texto_busqueda
+    {
+        color: $color-principal;
+    }
+    
+
+    .texto_busqueda
+    {
+        width: 600px;
+        font-size: 36px;
+        text-align: center;
+        color: $color-principal;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        
+    }
+    
+    .contenedor_buscar
+    {
+        border: 1px solid $color-principal;
+        padding: 5px;
+        width: 500px;
+        height: 50px;
+        border-radius: 20px;
+
+        .icon_buscar
+        {
+            color: $color-principal;
+            background-color: white;
+            font-size: 20px;
+        }
+
+        .input_buscar
+        {
+            width: 90%;
+            height: 40px;
+            border-radius: 20px;
+            margin-left: 20px;
+            color: blue;
+            outline: none;   
+        }
+
+        .divBusqueda
+        {
+            display: none;
+            align-items: center;
+            width: 90%;
+            height: 40px;
+            margin-left: 10px;
+            border-top: 1px solid lightblue;
+
+            &:hover
+            {
+                background-color: $color-principal;
+                color: white;
+
+            }
+
+            .lineaBusqueda
+            {
+                margin-left: 10px;
+                color: lightgrey;
+                
+            }
+        }
+    }
+}
+
+.texto_verde_busqueda
+{
+    color: $color-verde-texto;
+}
+
+.resultadoBusqueda
+{
+    display: none; // Debe ser "flex" cuándo se active la busqueda
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px ;
+    justify-content: flex-start;
+
+    
+    .gifoResultadoBusqueda
+    {
+        width: 22%;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .tituloBusqueda
+    {
+        color: $color-principal;
+        font-size: 36px;
+        font-weight: bold;
+        width: 100%;
+        text-align: center;
+        // border: 2px solid blue;
+    }
+}
+
+.contenedorBotonVerMas
+{
+    display: none;
+    justify-content: center;
+    margin-bottom: 70px;
+    .botonVerMasBuscar
+    {
+        @extend #botonCircular;
+    }
+}
+
+// *********************************************************************
+// ************************** Mis Favoritos ****************************
+// *********************************************************************
+
+.contenedorMisFavoritos
+{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    
+    .imagenCorazonFav
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tituloFavoritos
+    {
+        font-weight: bold;
+        color: $color-principal;
+        font-size: 27px;
+        margin-bottom: 20px;
+    }
+    
+    .imagenCorazonSinContenido
+    {
+        width: 150px;
+        margin-top: 100px;
+        display: none; // Se debe mostrar flex cuándo hayan gifos en favoritos
+    }
+
+    .textoFavoritosSinContenido
+    {
+        width: 450px;
+        text-align: center;
+        font-weight: bold;
+        // font-size: 22px;
+        color: aquamarine;
+        margin-top: 20px;
+        // border: 2px solid blue;
+        display: none; // Se debe mostrar flex cuándo hayan gifos en favoritos
+    }
+
+    .gifosFavoritos
+    {
+        display: flex; // Debe ser "flex" cuándo se active la busqueda
+        flex-wrap: wrap;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-content: flex-start;
+        
+        .gifoResultadoFavoritos
+        {
+            width: 23%;
+            height: 200px;
+            margin: 10px;
+        }
+    }
+}
+
+
+// *********************************************************************
+// ************************* Texto Trending ****************************
+// *********************************************************************
+
+.contenedor_texto_trending
+{
+    display: flex; // Debe ser "none" cuándo se active la busqueda
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    // margin-top: 50px;
+    width: 80%;
+    margin-bottom: 100px;
+    .titulo_trending
+    {
+        color: $color-principal;
+        font-weight: bold;
+    }
+    .texto_trending
+    {
+        color: $color-principal;
+        font-weight: lighter;
+    }
+}
+
+.contenedorBusquedaSinResultado
+{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #50E3C2;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    margin-bottom: 80px;
+
+    .imagenBusquedaSinResultado
+    {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+}
+
+.contenedor_trending_gifos
+{
+    background-color: $color-azul-contenerdor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .titulo_trending_gifos
+    {
+        background-color: $color-azul-contenerdor;
+        color: $color-principal;
+        width: 80%;
+        font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .texto_trending_gifos
+    {
+        background-color: $color-azul-contenerdor;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .contenedor_gifos
+    {
+        background-color: $color-azul-contenerdor;
+        display: flex;
+        // flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 100px;
+
+        .gifos_trending
+        {
+            background-color: $color-azul-contenerdor;
+            
+            .gifos_trending_gifos
+            {
+                width: 340px;
+                height: 250px;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                
+                &:hover
+                {
+                    opacity: 0.3;
+                }
+            }
+            .iconosGifos
+            {
+                z-index: 1;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                width: 120px;
+                font-size: 24px;
+                border-radius: 2px solid blue;
+                
+                div
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 10px;
+                    background-color: lightgrey;
+                    border-radius: 20%;
+
+                    &:hover
+                    {
+                        color: blue;                    
+                        cursor: pointer;
+                        // box-shadow: inset 0 0 0 1000px rgba(87,46,229,.60);;
+                    }
+                    #iconoexpandir1:hover, #iconoexpandir2:hover, #iconoexpandir3:hover
+                    {
+                        cursor: all-scroll;
+                    }
+                }
+            }
+            #iconosGifos1
+            {
+                top: 100px;
+                left: 215px;
+
+                #iconodescarga1, #iconoexpandir1
+                {
+                    color: black;
+                }
+                .iconoFav1
+                {
+                    color: black;
+                }
+            }
+            #iconosGifos2
+            {
+                top: 70px;
+                left: 560px;
+                .iconoFav2, #iconodescarga2, #iconoexpandir2
+                {
+                    color: black;
+                }
+            }
+            
+            #iconosGifos3
+            {
+                top: 40px;
+                left: 910px;
+                .iconoFav3, #iconodescarga3, #iconoexpandir3
+                {
+                    color: black;
+                }
+            }
+
+            .textosGifos
+            {
+                
+                position: absolute;
+                display: none;
+
+                #usuarioGifo1
+                {
+                    position: relative;
+                    top: 220px;
+                    left: 30px;
+                    font-size: 16px;
+                }            
+                #tituloGifo1
+                {
+                    position: relative;
+                    top: 220px;
+                    left: 30px;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+                #usuarioGifo2
+                {
+                    position: relative;
+                    top: 170px;
+                    left: 390px;
+                    font-size: 16px;
+                }
+                #tituloGifo2
+                {
+                    position: relative;
+                    top: 170px;
+                    left: 390px;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+                #usuarioGifo3
+                {
+                    position: relative;
+                    top: 140px;
+                    left: 750px;
+                    font-size: 16px;
+                }
+                #tituloGifo3
+                {
+                    position: relative;
+                    top: 140px;
+                    left: 750px;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .boton_anterior_gifos
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $color-principal;
+            color: $color-principal;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: $color-azul-contenerdor;
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+            margin-right: 10px;
+            outline: none;  
+
+            &:hover
+            {
+                background-color: #99FFFF;
+                cursor: pointer;
+            }
+            &:active
+            {
+                background-color: 	#6699FF;
+            }
+        }
+        
+        
+        
+    }
+}
+
+.footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 150px;
+
+    a
+    {
+        margin-left: 20px;
+        :hover
+        {
+            color: $color-principal;
+            transform: scale(1.5);
+        }
+    }
+}
+
+// *********************************************************************
+// *************************** Crear GIFO ******************************
+// *********************************************************************
+
+.crearGifoContenedor
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+    display: none; // Debe ser "flex" cuándo se active el menú mis Gifos
+
+    .crearGifoContenedorInterno1
+    {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        
+        .imagenCamara
+        {
+            width: 200px;
+        }
+
+        .crearGifoRecuadro
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 65%;
+            height: 390px;
+            border: 1px solid blue;
+            
+            .crearGifoTextoRecuadro
+            {
+                color: blue;
+                text-align: center;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .CrearGifosTextoNegro
+            {
+                margin-top: 5px;
+                color: black;
+                font-size: 16px;
+                font-weight: normal;
+            }
+        }
+
+        #crearGifoRecuadroSubido
+        {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: blue;
+            margin-top: 20px;
+            opacity: 0.4;
+
+            p
+            {
+                margin-top: 20px;
+            }
+        }
+        
+        .CrearGifoVideo
+        {
+            display: none;
+            width: 65%;
+            height: 390px;
+        }
+    }
+
+    .crearGifoContenedorInterno2
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        .crearGifoContenedorCirculos
+        {
+            width: 52%;
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            .CrearGifoCirculo
+            {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid blue;
+                margin-top: 20px;
+                margin-left: 30px;
+                font-size: 16px;
+                font-weight: bold;
+                color: blue;
+                text-align: center;
+            }
+        }
+
+        .tiempoVideo
+        {
+            position: relative;
+            right: 5%;
+            top: 15px;
+            text-align: right;
+            color: blue;
+            font-weight: bold;
+            display: none;
+
+            &:hover
+            {
+                cursor: pointer;
+            }
+        }
+        
+    }
+
+    .imagenPelicula
+    {
+        position: relative;
+        // left: 460px;
+        right: -35%;
+        bottom: 50px;
+    }
+
+    .crearGifoLineaAzul
+    {
+        width: 58%;
+        height: 7px;
+        background-color: blue;
+        border-radius: 7px;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .botonCrearGifo
+    {
+        @extend #botonCircular;
+    }
+}
+
+
+#botonCircular
+{
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid blue;
+    background-color: white;
+    font-size: 13px;
+    font-weight: bold;
+    color: blue;
+
+    &:hover
+    {
+        cursor: pointer;
+        background-color: #99FFFF;
+    }
+}
+
+
+
+
+
+//************************************************************************************************************
+//***************************************** Media Query TABLET ***********************************************
+//************************************************************************************************************
+@media screen and (max-width: 1330px)
+{
+    .contenedor_trending_gifos
+    {
+        
+        .contenedor_gifos
+        {
+            justify-content: start;
+            width: 70%;
+            overflow-x: scroll;
+            // border: 1px solid blue;
+
+            .boton_anterior_gifos
+            {
+                display: none;
+            }
+            
+            .gifos_trending
+            {
+                display: flex;
+                
+                .gifos_trending_gifos
+                {
+                    width: 340px;
+                    height: 250px;
+                    margin-bottom: 20px;
+                    margin-left: 10px;
+                    &:hover
+                    {
+                        opacity: 1;
+                        cursor: all-scroll;
+                    }
+                }
+
+                #iconosGifos1, #iconosGifos2, #iconosGifos3, #usuarioGifo1, #tituloGifo1, #usuarioGifo2, #tituloGifo2, #usuarioGifo3, #tituloGifo3
+                {
+                    display: none;
+                }
+            }
+
+            
+            
+        }
+    }
+}

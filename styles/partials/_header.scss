@@ -1,0 +1,187 @@
+/*normalizadores*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    max-width: 1440px;
+    margin: auto;    
+    height: 45px;
+    top: 0;
+    padding: 10px 5%;
+    background-color: white;
+    margin-top: 15px;
+    z-index: 10;
+    margin-bottom: 30px;
+}
+
+header img 
+{
+    float: left;
+}
+header .add-logo
+{
+    display: none;
+    float: right;
+}
+header nav {
+    float: right;
+}
+header nav .menu ul {
+    /*posicion absolute para que se posicione debajo del resto del header - top medida del header*/
+    width: 50%;
+    position: absolute;
+    overflow: hidden;
+    list-style: none;
+    background: blue;
+    opacity: 0.8;
+    color: white;
+    height: 0px;
+    right: 210px;
+    transition: height 0.5s ease;
+}
+header nav .menu  ul li {
+    position: relative;
+} 
+header nav .menu  ul li:hover {
+    border: 1px solid white;
+} 
+header nav .menu ul li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: blue;
+    color: white;
+    padding: 16px 5%;
+    line-height: 28px;
+    display: block;
+}
+header nav .menu  ul li a:hover {
+    color: #fff;
+    cursor: pointer;
+} 
+/*animación del menu que se desplega*/
+header nav .menu input[type="checkbox"]:checked ~ ul {
+    height: 183px;
+    transition: height 0.5s ease-in-out;
+    -moz-transition: height 0.5s ease-in-out;
+    -o-transition: height 0.5s ease-in-out;
+    -webkit-transition: height 0.5s ease-in-out;
+}
+header nav .menu {
+    padding-top: 30px;
+}
+/*checkbox transparente y en primer plano*/
+header nav .menu input {
+    display: block;
+    position: relative;
+    top: -30px;
+    width: 40px;
+    height: 32px;
+    opacity: 0;
+    z-index: 2;
+    // position: absolute;
+}
+/*span -lineas del menu hamburguesa-*/
+header nav .menu span {
+    display: block;
+    position: relative;
+    top: -60px;
+    width: 25px;
+    height: 2.5px;
+    margin-bottom: 6.5px;
+    position: relative;
+    background: #000;
+    z-index: 1;
+    transform-origin: 3px 0px;
+    transition: transform 0.5s ease,
+        opacity 0.55s ease;
+}
+header nav .menu span:first-child {
+    transform-origin: 0% 0%;
+}
+header nav .menu span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+/*movimiento a cruz*/
+header nav .menu input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(2px, 1px);
+}
+header nav .menu input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+header nav .menu input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(1px, 0px);
+}
+
+
+
+
+
+
+/*menu simple con tamaño menor a 930px*/
+@media screen and (min-width: 930px){
+
+    header .add-logo
+    {
+        display: block;
+        float: right;
+    }
+
+    header nav {
+        position: absolute;
+        left: 50%;
+        top: 40px;
+    }
+
+    header nav .menu {
+        padding-top: 10px;
+    }
+
+    header nav .menu ul {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        color: blue;
+        overflow: hidden;
+        background: unset;
+        height: unset;
+    }
+    header nav .menu  ul li {
+        padding: 5px 10px;
+        display: inline-block;
+    } 
+    header nav .menu  ul li:hover {
+        background: unset;
+        border-bottom: 5px solid $color-principal;
+        transform: scale(1.1);
+    } 
+    header nav .menu  ul li:active {
+        color: $color-text-active;
+    }
+
+    header nav .menu ul li a {
+        padding: unset;
+        line-height: unset;
+        background: white;
+        color: blue;
+    }
+    header nav .menu  ul li a:hover {
+        color: $color-principal;
+    } 
+    header nav .menu input {
+        display: none;
+    }
+    header nav .menu span {
+        display: none;
+    }
+}

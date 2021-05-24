@@ -1,0 +1,208 @@
+
+.contenedor_trending_gifosP
+{
+    background-color: $color-azul-contenerdor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .titulo_trending_gifos
+    {
+        background-color: $color-azul-contenerdor;
+        color: $color-principal;
+        width: 80%;
+        font-weight: bold;
+        font-size: 26px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .texto_trending_gifos
+    {
+        background-color: $color-azul-contenerdor;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .contenedor_gifos
+    {
+        background-color: $color-azul-contenerdor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 100px;
+
+        .gifos_trending
+        {
+            background-color: $color-azul-contenerdor;
+        }
+
+        .boton_anterior_gifos
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $color-principal;
+            color: $color-principal;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: $color-azul-contenerdor;
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+            margin-right: 10px;
+            outline: none;  
+
+            &:hover
+            {
+                background-color: #99FFFF;
+                cursor: pointer;
+            }
+            &:active
+            {
+                background-color: 	#6699FF;
+            }
+        }
+        
+        .gifos_trending_gifos
+        {
+            min-width: 32%;
+            width: 32%;
+            min-height: 250px;
+            height: 250px;
+            background-color: white;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            // border: 2px solid blue;
+
+            &:hover
+            {
+                opacity: 0.3;
+                // box-shadow: inset 0 0 0 1000px rgba(87,46,229,.60);;
+            }
+        }
+        .iconosGifos
+        {
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: 120px;
+            font-size: 24px;
+            border-radius: 2px solid blue;
+            // display: none;
+
+            div
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+                background-color: lightgrey;
+                border-radius: 20%;
+
+                &:hover
+                {
+                    color: blue;                    
+                    cursor: pointer;
+                    // box-shadow: inset 0 0 0 1000px rgba(87,46,229,.60);;
+                }
+                #iconoexpandir1:hover, #iconoexpandir2:hover, #iconoexpandir3:hover
+                {
+                    cursor: all-scroll;
+                }
+            }
+        }
+        #iconosGifos1
+        {
+            top: 100px;
+            left: 230px;
+
+            #iconodescarga1, #iconoexpandir1
+            {
+                color: black;
+            }
+            .iconoFav1
+            {
+                color: black;
+            }
+        }
+        #iconosGifos2
+        {
+            top: 70px;
+            left: 590px;
+            .iconoFav2, #iconodescarga2, #iconoexpandir2
+            {
+                color: black;
+            }
+        }
+        
+        #iconosGifos3
+        {
+            top: 40px;
+            left: 950px;
+            .iconoFav3, #iconodescarga3, #iconoexpandir3
+            {
+                color: black;
+            }
+        }
+
+        .textosGifos
+        {
+            
+            position: absolute;
+            display: none;
+
+            #usuarioGifo1
+            {
+                position: relative;
+                top: 220px;
+                left: 30px;
+                font-size: 16px;
+            }            
+            #tituloGifo1
+            {
+                position: relative;
+                top: 220px;
+                left: 30px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            #usuarioGifo2
+            {
+                position: relative;
+                top: 170px;
+                left: 390px;
+                font-size: 16px;
+            }
+            #tituloGifo2
+            {
+                position: relative;
+                top: 170px;
+                left: 390px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            #usuarioGifo3
+            {
+                position: relative;
+                top: 140px;
+                left: 750px;
+                font-size: 16px;
+            }
+            #tituloGifo3
+            {
+                position: relative;
+                top: 140px;
+                left: 750px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+        }
+        
+    }
+}
