@@ -587,7 +587,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 body {
   background-color: #FFF;
   max-width: 1440px;
-  min-width: 560px;
+  min-width: 300px;
   margin: auto;
 }
 
