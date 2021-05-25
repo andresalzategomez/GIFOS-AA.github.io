@@ -68,12 +68,12 @@
 <!-- ********************************************************************* -->
 
     <div id="myModal" class="modal">
-        <button id="boton_anterior_modal" class="boton_anterior_modal"><</button>
+        <button id="boton_anterior_modal" class="boton_anterior_modal">&lt;</button>
         <div id="modal-content" class="modal-content">
             <span class="close">&times;</span>
             
             <div id="GifoExtend">
-                <img id="imgGifoSelect" class="imgGifoSelect" src="" alt="" srcset="">
+                <img id="imgGifoSelect" class="imgGifoSelect" src="./images/cargando.png" alt="Gifo Selected">
                 <div id="gifoTextoIcono">
                     <div id="iconosModal">
                         <i id="iconoFav1GifoSelect1" class="fas fa-heart"></i>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <button id="boton_siguiente_modal" class="boton_anterior_modal">></button>
+        <button id="boton_siguiente_modal" class="boton_anterior_modal">&amp;</button>
     </div>
 
 <!-- ********************************************************************* -->
@@ -95,8 +95,7 @@
 
     <div id="resultadoBusqueda" class="resultadoBusqueda">
         <p id="tituloBusqueda" class="tituloBusqueda"></p>
-        <!-- <img class="gifoResultadoBusqueda" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt=""> -->
-        <div id="iconosGifos1" class="iconosGifos">
+        <div id="iconosGifosBusqueda1" class="iconosGifos">
         </div>
     </div>
     <div id="contenedorBotonVerMas" class="contenedorBotonVerMas">
@@ -109,7 +108,7 @@
     </div>
 
     <div id="contenedorBusquedaSinResultado" class="contenedorBusquedaSinResultado">
-        <img id="imagenBusquedaSinResultado" class="imagenBusquedaSinResultado" src="./images/icon-busqueda-sin-resultado.svg" alt="">
+        <img id="imagenBusquedaSinResultado" class="imagenBusquedaSinResultado" src="./images/icon-busqueda-sin-resultado.svg" alt="Sin Resultado">
         <p>Intenta con otra búsqueda.</p>
     </div>
 
@@ -118,13 +117,12 @@
 <!-- ********************************************************************* -->
 
     <div id="contenedorMisFavoritos" class="contenedorMisFavoritos">
-        <img id="imagenCorazonFav" class="imagenCorazonFav" src="./images/icon-mis-gifos.svg" alt="">
+        <img id="imagenCorazonFav" class="imagenCorazonFav" src="./images/icon-mis-gifos.svg" alt="Favoritos">
         <p id="tituloFavoritos" class="tituloFavoritos">Favoritos</p>
-        <img id="imagenCorazonSinContenido" class="imagenCorazonSinContenido" src="" alt="Sin Contenido">
+        <img id="imagenCorazonSinContenido" class="imagenCorazonSinContenido" src="./images/cargando.png" alt="Sin Contenido">
         <p id="textoFavoritosSinContenido" class="textoFavoritosSinContenido"></p>
 
         <div id="gifosFavoritos" class="gifosFavoritos">
-            <!-- <img class="gifoResultadoFavoritos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt=""> -->
         </div>
     </div>
 
@@ -135,7 +133,7 @@
 
 <div id="crearGifoContenedor" class="crearGifoContenedor">
     <div id="crearGifoContenedorInterno1" class="crearGifoContenedorInterno1">
-        <img id="imagenCamara" class="imagenCamara" src="./images/camara.svg" alt="">
+        <img id="imagenCamara" class="imagenCamara" src="./images/camara.svg" alt="Cámara">
         <div id="crearGifoRecuadro" class="crearGifoRecuadro">
             <div id="crearGifoTextoRecuadro" class="crearGifoTextoRecuadro">
                 <p id="CrearGifoTextoAzul1">Aquí podrás</p>
@@ -149,10 +147,10 @@
             <i class="fas fa-check"></i>
             <p>Subido con exito</p>
         </div>
-        <video src="" id="CrearGifoVideo" class="CrearGifoVideo">
+        <video src="." id="CrearGifoVideo" class="CrearGifoVideo">
         </video>
     </div>
-    <div id=crearGifoContenedorInterno2" class="crearGifoContenedorInterno2">
+    <div id="crearGifoContenedorInterno2" class="crearGifoContenedorInterno2">
         <div id="crearGifoContenedorCirculos" class="crearGifoContenedorCirculos">                
             <div id="CrearGifoCirculo1" class="CrearGifoCirculo">1</div>
             <div id="CrearGifoCirculo2" class="CrearGifoCirculo">2</div>
@@ -160,7 +158,7 @@
         </div>
         <p id="tiempoVideo" class="tiempoVideo">Tiempo Video</p>
     </div>
-    <img id="imagenPelicula" class="imagenPelicula" src="./images/pelicula.svg" alt="">
+    <img id="imagenPelicula" class="imagenPelicula" src="./images/pelicula.svg" alt="Pelicula">
     <div id="crearGifoLineaAzul" class="crearGifoLineaAzul"></div>        
     <button id="botonCrearGifo" class="botonCrearGifo">COMENZAR</button>
 </div>
@@ -175,9 +173,9 @@
         <p id="texto_trending_gifos" class="texto_trending_gifos">Mira los últimos GIFO de nuestra comunidad.</p>
 
         <div id="contenedor_gifos" class="contenedor_gifos">
-            <button id="boton_anterior" class="boton_anterior_gifos" disabled><</button>
+            <button id="boton_anterior" class="boton_anterior_gifos" disabled>&lt;</button>
             <div id="gifos_trending" class="gifos_trending">
-                <img id="div1" class="gifos_trending_gifos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt="" srcset="">
+                <img id="div1" class="gifos_trending_gifos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt="" >
                 <div id="iconosGifos1" class="iconosGifos">
                     <div>
                         <i id="iconoFav1" class="fas fa-heart iconoFav1"></i>
@@ -193,7 +191,7 @@
                     <p id="usuarioGifo1">User</p>
                     <p id="tituloGifo1">Titulo GIFO</p>
                 </div>
-                <img id="div2" class="gifos_trending_gifos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt="" srcset="">
+                <img id="div2" class="gifos_trending_gifos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt="">
                 <div id="iconosGifos2" class="iconosGifos">
                     <div>
                         <i id="iconoFav2" class="fas fa-heart iconoFav2"></i>
@@ -209,7 +207,7 @@
                     <p id="usuarioGifo2">User</p>
                     <p id="tituloGifo2">Titulo GIFO</p>
                 </div>
-                <img id="div3" class="gifos_trending_gifos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt="" srcset="">
+                <img id="div3" class="gifos_trending_gifos" src="https://media.giphy.com/media/mFZ7zYki7WZEwyDWaU/giphy.gif" alt="">
                 <div id="iconosGifos3" class="iconosGifos">
                     <div>
                         <i id="iconoFav3" class="fas fa-heart iconoFav3"></i>
@@ -226,7 +224,7 @@
                     <p id="tituloGifo3">Titulo GIFO</p>
                 </div>
             </div>
-            <button id="boton_siguiente" class="boton_anterior_gifos">></button>
+            <button id="boton_siguiente" class="boton_anterior_gifos">&amp;</button>
         </div>
         
     </div>
