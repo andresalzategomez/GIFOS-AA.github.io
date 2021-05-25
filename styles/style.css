@@ -328,7 +328,6 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 
 .modal .modal-content #GifoExtend #gifoTextoIcono #iconosModal {
   float: right;
-  border: 1px solid blue;
 }
 
 .modal .modal-content #GifoExtend #gifoTextoIcono #textoGifoUsuario {
@@ -1363,6 +1362,13 @@ body {
     width: 45%;
     height: auto;
     margin: 10px;
+  }
+  .contenedorMisFavoritos .textoFavoritosSinContenido {
+    width: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: none;
   }
   .footer {
     -webkit-box-orient: vertical;

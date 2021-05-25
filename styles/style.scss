@@ -195,10 +195,8 @@ body
         width: 450px;
         text-align: center;
         font-weight: bold;
-        // font-size: 22px;
         color: aquamarine;
         margin-top: 20px;
-        // border: 2px solid blue;
         display: none; // Se debe mostrar flex cuándo hayan gifos en favoritos
     }
 
@@ -816,6 +814,13 @@ body
                 height: auto;
                 margin: 10px;
             }
+        }
+
+        .textoFavoritosSinContenido
+        {
+            width: 90%;
+            justify-content: center;
+            display: none; // Se debe mostrar flex cuándo hayan gifos en favoritos
         }
     }
 

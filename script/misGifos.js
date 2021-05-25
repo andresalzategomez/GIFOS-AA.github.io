@@ -10,15 +10,22 @@ menuGif.onclick =  async ()=>{
   
     tituloFavoritos.textContent = "Mis Gifos";
     imagenCorazonFav.src = "./images/icon-mis-gifos.svg";
-    textoFavoritosSinContenido.textContent = "¡Anímate a crar tu primer GIFO!";
+    textoFavoritosSinContenido.textContent = "¡Anímate a crear tu primer GIFO!";
 
     // console.log(MisGifos.length);
     if(MisGifos.length == 0)
     {
         gifosFavoritos.style.display = "none";
         textoFavoritosSinContenido.style.display = "flex";
-        textoFavoritosSinContenido.style.fontSize = "38px";
-        textoFavoritosSinContenido.style.width = "600px";
+        if(window.matchMedia("(max-width: 800px)").matches) 
+        {
+            textoFavoritosSinContenido.style.fontSize = "22px";
+            textoFavoritosSinContenido.style.width = "90%";
+        }else{
+            textoFavoritosSinContenido.style.fontSize = "38px";
+            textoFavoritosSinContenido.style.width = "600px";
+        }
+        
         imagenCorazonSinContenido.src = "./images/icon-mis-gifos-sin-contenido.svg";
         imagenCorazonSinContenido.style.display = "flex";
         
