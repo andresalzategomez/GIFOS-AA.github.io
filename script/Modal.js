@@ -67,13 +67,13 @@ iconoexpandir3.onclick = function() {
 
 span.onclick = function() {
   modal.style.display = "none";
-  location.reload();
+  // location.reload();
 }
 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    location.reload();
+    // location.reload();
   }
 }
 
