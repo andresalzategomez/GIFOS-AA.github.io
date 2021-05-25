@@ -15,7 +15,7 @@ body
 {
     background-color: $color-diurno;
     max-width: 1440px;
-    min-width: 300px;
+    min-width: 200px;
     margin: auto;
 }
 .header_lineaAzul
@@ -498,6 +498,7 @@ body
 .crearGifoContenedor
 {
     width: 100%;
+    min-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -664,16 +665,21 @@ body
 
 
 //************************************************************************************************************
-//***************************************** Media Query TABLET ***********************************************
+//***************************************** Media Query TABLET 1330px*****************************************
 //************************************************************************************************************
 @media screen and (max-width: 1330px)
 {
 
     .contenedor_busqueda
     {
+        .imagenHeader
+        {
+            width: 90%;
+        }
         .texto_busqueda
         {
             width: 70%;
+            font-size: 25px;
         }
     }
 
@@ -689,12 +695,18 @@ body
 
     .contenedor_trending_gifos
     {
-       
+        .texto_trending_gifos
+        {
+            font-size: 16px;
+            width: 90%;
+            text-align: center;
+        }
         
         .contenedor_gifos
         {
             justify-content: start;
             width: 70%;
+            height: auto;
             overflow-x: scroll;
             // border: 1px solid blue;
 
@@ -731,6 +743,60 @@ body
         }
     }
 
+    .contenedor_busqueda
+    {
+        width: 80%;
+        .contenedor_buscar
+        {
+            border: 1px solid $color-principal;
+            padding: 5px;
+            width: 80%;
+            height: 50px;
+            border-radius: 20px;
+
+            .icon_buscar
+            {
+                color: $color-principal;
+                background-color: white;
+                font-size: 20px;
+            }
+
+            .input_buscar
+            {
+                width:90%;
+                height: 40px;
+                border-radius: 20px;
+                margin-left: 20px;
+                color: blue;
+                outline: none;   
+            }
+
+            .divBusqueda
+            {
+                display: none;
+                align-items: center;
+                width: 90%;
+                height: 40px;
+                margin-left: 10px;
+                border-top: 1px solid lightblue;
+
+                &:hover
+                {
+                    background-color: $color-principal;
+                    color: white;
+
+                }
+
+                .lineaBusqueda
+                {
+                    margin-left: 10px;
+                    color: lightgrey;
+                    
+                }
+            }
+        }
+    }
+
 
     
     .contenedorMisFavoritos
@@ -746,7 +812,7 @@ body
             
             .gifoResultadoFavoritos
             {
-                width: 35%;
+                width: 45%;
                 height: auto;
                 margin: 10px;
             }
@@ -757,5 +823,89 @@ body
     {
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+
+//************************************************************************************************************
+//***************************************** Media Query TABLET 1330px*****************************************
+//************************************************************************************************************
+@media screen and (max-width: 750px)
+{
+    .contenedor_busqueda
+    {
+        .contenedor_buscar
+        {
+            min-width: 215px;
+            .icon_buscar
+            {
+                float: right;
+                margin-right: 10px;
+            }
+
+            .input_buscar
+            {
+                width:60%;
+                height: 40px;
+                border-radius: 20px;
+                margin-left: 20px;
+                color: blue;
+                outline: none;   
+            }
+        }
+    }
+
+
+    .resultadoBusqueda
+    {
+        justify-content: center;
+        .gifoResultadoBusqueda
+        {
+            width: 45%;
+            height: auto;
+            margin: 10px;
+        }
+
+        .tituloBusqueda
+        {
+            color: $color-principal;
+            font-size: 36px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            // border: 2px solid blue;
+        }
+    }
+
+
+    .contenedor_trending_gifos
+    {
+        .contenedor_gifos
+        {
+            
+            .gifos_trending
+            {
+                .gifos_trending_gifos
+                {
+                    width: 80%;
+                    height: auto;
+                    margin-bottom: 20px;
+                    margin-left: 10px;
+                    &:hover
+                    {
+                        opacity: 1;
+                        cursor: all-scroll;
+                    }
+                }
+
+                #iconosGifos1, #iconosGifos2, #iconosGifos3, #usuarioGifo1, #tituloGifo1, #usuarioGifo2, #tituloGifo2, #usuarioGifo3, #tituloGifo3
+                {
+                    display: none;
+                }
+            }
+
+            
+            
+        }
     }
 }

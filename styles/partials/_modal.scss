@@ -1,4 +1,5 @@
-.modal {
+.modal 
+{
     display: none; /* Hidden by default */
     justify-content: center;
     align-items: center;
@@ -62,7 +63,8 @@
       }
     }
 
-  .modal-content {
+  .modal-content 
+  {
     display: flex;
     width: 80%;
     flex-direction: column;
@@ -77,23 +79,33 @@
     {
       display: flex;
       flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-      // border: 2px solid blue;
-
-      #imgGifoSelect
+      
+      .imgGifoSelect
       {
-        width: 450px;
-        height: 300px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        
+        &:hover
+        {
+            opacity: 0.3;
+        }
       }
       
       #gifoTextoIcono
       {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: block;
+        flex-direction: column;
+        justify-content: start;
         margin-top: 20px;
         font-size: 20px;
+
+        #iconosModal
+        {
+          float: right;
+          border: 1px solid blue;
+        }
 
         #textoGifoUsuario
         {

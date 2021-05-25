@@ -302,24 +302,33 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
           flex-direction: column;
 }
 
-.modal .modal-content #GifoExtend #imgGifoSelect {
-  width: 450px;
-  height: 300px;
+.modal .modal-content #GifoExtend .imgGifoSelect {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.modal .modal-content #GifoExtend .imgGifoSelect:hover {
+  opacity: 0.3;
 }
 
 .modal .modal-content #GifoExtend #gifoTextoIcono {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
+  display: block;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-top: 20px;
   font-size: 20px;
+}
+
+.modal .modal-content #GifoExtend #gifoTextoIcono #iconosModal {
+  float: right;
+  border: 1px solid blue;
 }
 
 .modal .modal-content #GifoExtend #gifoTextoIcono #textoGifoUsuario {
@@ -587,7 +596,7 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
 body {
   background-color: #FFF;
   max-width: 1440px;
-  min-width: 300px;
+  min-width: 200px;
   margin: auto;
 }
 
@@ -1069,6 +1078,7 @@ body {
 
 .crearGifoContenedor {
   width: 100%;
+  min-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1250,12 +1260,21 @@ body {
 }
 
 @media screen and (max-width: 1330px) {
+  .contenedor_busqueda .imagenHeader {
+    width: 90%;
+  }
   .contenedor_busqueda .texto_busqueda {
     width: 70%;
+    font-size: 25px;
   }
   .contenedor_texto_trending .texto_trending {
     width: 200px;
     font-size: 14px;
+    text-align: center;
+  }
+  .contenedor_trending_gifos .texto_trending_gifos {
+    font-size: 16px;
+    width: 90%;
     text-align: center;
   }
   .contenedor_trending_gifos .contenedor_gifos {
@@ -1263,6 +1282,7 @@ body {
         -ms-flex-pack: start;
             justify-content: start;
     width: 70%;
+    height: auto;
     overflow-x: scroll;
   }
   .contenedor_trending_gifos .contenedor_gifos .boton_anterior_gifos {
@@ -1286,6 +1306,47 @@ body {
   .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos1, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos2, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos3, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #usuarioGifo1, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #tituloGifo1, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #usuarioGifo2, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #tituloGifo2, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #usuarioGifo3, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #tituloGifo3 {
     display: none;
   }
+  .contenedor_busqueda {
+    width: 80%;
+  }
+  .contenedor_busqueda .contenedor_buscar {
+    border: 1px solid #0000FF;
+    padding: 5px;
+    width: 80%;
+    height: 50px;
+    border-radius: 20px;
+  }
+  .contenedor_busqueda .contenedor_buscar .icon_buscar {
+    color: #0000FF;
+    background-color: white;
+    font-size: 20px;
+  }
+  .contenedor_busqueda .contenedor_buscar .input_buscar {
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 20px;
+    color: blue;
+    outline: none;
+  }
+  .contenedor_busqueda .contenedor_buscar .divBusqueda {
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    height: 40px;
+    margin-left: 10px;
+    border-top: 1px solid lightblue;
+  }
+  .contenedor_busqueda .contenedor_buscar .divBusqueda:hover {
+    background-color: #0000FF;
+    color: white;
+  }
+  .contenedor_busqueda .contenedor_buscar .divBusqueda .lineaBusqueda {
+    margin-left: 10px;
+    color: lightgrey;
+  }
   .contenedorMisFavoritos .gifosFavoritos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1299,7 +1360,7 @@ body {
         justify-content: space-around;
   }
   .contenedorMisFavoritos .gifosFavoritos .gifoResultadoFavoritos {
-    width: 35%;
+    width: 45%;
     height: auto;
     margin: 10px;
   }
@@ -1311,6 +1372,54 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .contenedor_busqueda .contenedor_buscar {
+    min-width: 215px;
+  }
+  .contenedor_busqueda .contenedor_buscar .icon_buscar {
+    float: right;
+    margin-right: 10px;
+  }
+  .contenedor_busqueda .contenedor_buscar .input_buscar {
+    width: 60%;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 20px;
+    color: blue;
+    outline: none;
+  }
+  .resultadoBusqueda {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .resultadoBusqueda .gifoResultadoBusqueda {
+    width: 45%;
+    height: auto;
+    margin: 10px;
+  }
+  .resultadoBusqueda .tituloBusqueda {
+    color: #0000FF;
+    font-size: 36px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending .gifos_trending_gifos {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending .gifos_trending_gifos:hover {
+    opacity: 1;
+    cursor: all-scroll;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos1, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos2, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos3, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #usuarioGifo1, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #tituloGifo1, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #usuarioGifo2, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #tituloGifo2, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #usuarioGifo3, .contenedor_trending_gifos .contenedor_gifos .gifos_trending #tituloGifo3 {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

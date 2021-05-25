@@ -9,8 +9,7 @@ menuModoNocturno.onclick = ()=>{
         headerLinea.style.backgroundColor = "blue";
         footerLinea.style.backgroundColor = "blue";
         
-        console.log(window.matchMedia("(max-width: 1330px)").matches);
-        if(window.matchMedia("(max-width: 930px)").matches) {
+        if(window.matchMedia("(max-width: 929px)").matches) {
             itemA.forEach(function(element) {
                 element.style.background = "blue";
                 element.style.color = "white";
@@ -47,7 +46,7 @@ menuModoNocturno.onclick = ()=>{
         });
 
         menuHeader.style.background = "white";
-        if(!window.matchMedia("(max-width: 1330px)").matches) 
+        if(!window.matchMedia("(max-width: 929px)").matches) 
         {
             menuModo.style.color = "blue";
             menuFav.style.color = "blue";
@@ -114,10 +113,19 @@ menuModoNocturno.onclick = ()=>{
     headerLinea.style.backgroundColor = "black";
     footerLinea.style.backgroundColor = "black";
 
-    itemA.forEach(function(element) {
-        element.style.background = "black";
-        // element.style.color = "white";
-    });
+    if(!window.matchMedia("(max-width: 929px)").matches) 
+    {
+        itemA.forEach(function(element) {
+            element.style.background = "#37383C";
+            // element.style.color = "white";
+        });
+    }else{
+        itemA.forEach(function(element) {
+            element.style.background = "black";
+            // element.style.color = "white";
+        });
+
+    }
 
     itemLI1.onmouseover = function(){
         itemLI1.style.borderBottom= "5px solid white";
