@@ -369,223 +369,6 @@ header nav .menu input:checked ~ span:nth-last-child(2) {
   }
 }
 
-.contenedor_trending_gifosP {
-  background-color: #F4F5F9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contenedor_trending_gifosP .titulo_trending_gifos {
-  background-color: #F4F5F9;
-  color: #0000FF;
-  width: 80%;
-  font-weight: bold;
-  font-size: 26px;
-  text-align: center;
-  margin-top: 50px;
-}
-
-.contenedor_trending_gifosP .texto_trending_gifos {
-  background-color: #F4F5F9;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 50px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos {
-  background-color: #F4F5F9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-  margin-bottom: 100px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .gifos_trending {
-  background-color: #F4F5F9;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .boton_anterior_gifos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid #0000FF;
-  color: #0000FF;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #F4F5F9;
-  width: 40px;
-  height: 40px;
-  margin-left: 20px;
-  margin-right: 10px;
-  outline: none;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .boton_anterior_gifos:hover {
-  background-color: #99FFFF;
-  cursor: pointer;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .boton_anterior_gifos:active {
-  background-color: #6699FF;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .gifos_trending_gifos {
-  min-width: 32%;
-  width: 32%;
-  min-height: 250px;
-  height: 250px;
-  background-color: white;
-  margin-bottom: 20px;
-  margin-left: 10px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .gifos_trending_gifos:hover {
-  opacity: 0.3;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .iconosGifos {
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-  width: 120px;
-  font-size: 24px;
-  border-radius: 2px solid blue;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .iconosGifos div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
-  background-color: lightgrey;
-  border-radius: 20%;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .iconosGifos div:hover {
-  color: blue;
-  cursor: pointer;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .iconosGifos div #iconoexpandir1:hover, .contenedor_trending_gifosP .contenedor_gifos .iconosGifos div #iconoexpandir2:hover, .contenedor_trending_gifosP .contenedor_gifos .iconosGifos div #iconoexpandir3:hover {
-  cursor: all-scroll;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos1 {
-  top: 100px;
-  left: 230px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos1 #iconodescarga1, .contenedor_trending_gifosP .contenedor_gifos #iconosGifos1 #iconoexpandir1 {
-  color: black;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos1 .iconoFav1 {
-  color: black;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos2 {
-  top: 70px;
-  left: 590px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos2 .iconoFav2, .contenedor_trending_gifosP .contenedor_gifos #iconosGifos2 #iconodescarga2, .contenedor_trending_gifosP .contenedor_gifos #iconosGifos2 #iconoexpandir2 {
-  color: black;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos3 {
-  top: 40px;
-  left: 950px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos #iconosGifos3 .iconoFav3, .contenedor_trending_gifosP .contenedor_gifos #iconosGifos3 #iconodescarga3, .contenedor_trending_gifosP .contenedor_gifos #iconosGifos3 #iconoexpandir3 {
-  color: black;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos {
-  position: absolute;
-  display: none;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos #usuarioGifo1 {
-  position: relative;
-  top: 220px;
-  left: 30px;
-  font-size: 16px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos #tituloGifo1 {
-  position: relative;
-  top: 220px;
-  left: 30px;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos #usuarioGifo2 {
-  position: relative;
-  top: 170px;
-  left: 390px;
-  font-size: 16px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos #tituloGifo2 {
-  position: relative;
-  top: 170px;
-  left: 390px;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos #usuarioGifo3 {
-  position: relative;
-  top: 140px;
-  left: 750px;
-  font-size: 16px;
-}
-
-.contenedor_trending_gifosP .contenedor_gifos .textosGifos #tituloGifo3 {
-  position: relative;
-  top: 140px;
-  left: 750px;
-  font-weight: bold;
-  font-size: 12px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -1258,6 +1041,27 @@ body {
 }
 
 @media screen and (max-width: 1330px) {
+  .contenedor_trending_gifos .contenedor_gifos {
+    width: 95%;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending .gifos_trending_gifos {
+    width: 32%;
+    height: 250px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos1 {
+    left: 17%;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos2 {
+    left: 50%;
+  }
+  .contenedor_trending_gifos .contenedor_gifos .gifos_trending #iconosGifos3 {
+    left: 83%;
+  }
+}
+
+@media screen and (max-width: 950px) {
   .contenedor_busqueda .imagenHeader {
     width: 90%;
   }
@@ -1290,9 +1094,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .contenedor_trending_gifos .contenedor_gifos .gifos_trending .gifos_trending_gifos {
-    width: 340px;
+    width: 32%;
     height: 250px;
     margin-bottom: 20px;
     margin-left: 10px;

@@ -1,7 +1,6 @@
 @import "./partials/variables";
 @import "./partials/header";
 @import "./partials/modal";
-@import "./partials/prueba";
 // @import "./partials/favoritos";
 
 *
@@ -659,11 +658,50 @@ body
 
 
 
-
 //************************************************************************************************************
 //***************************************** Media Query TABLET 1330px*****************************************
 //************************************************************************************************************
 @media screen and (max-width: 1330px)
+{
+    .contenedor_trending_gifos
+    {
+        .contenedor_gifos
+        {
+            width: 95%;
+            .gifos_trending
+            {
+                .gifos_trending_gifos
+                {
+                    width: 32%;
+                    height: 250px;
+                    margin-bottom: 20px;
+                    margin-left: 10px;
+                }
+                
+                #iconosGifos1
+                {
+                    left: 17%;
+                }
+                #iconosGifos2
+                {
+                    left: 50%;
+                }
+                
+                #iconosGifos3
+                {
+                    left: 83%;
+                }
+            }
+        }
+    }
+}
+
+
+
+//************************************************************************************************************
+//***************************************** Media Query TABLET 950px*****************************************
+//************************************************************************************************************
+@media screen and (max-width: 950px)
 {
 
     .contenedor_busqueda
@@ -713,10 +751,11 @@ body
             .gifos_trending
             {
                 display: flex;
+                flex-wrap: nowrap;
                 
                 .gifos_trending_gifos
                 {
-                    width: 340px;
+                    width: 32%;
                     height: 250px;
                     margin-bottom: 20px;
                     margin-left: 10px;

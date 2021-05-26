@@ -18,8 +18,8 @@ async function getTrending ()
     const trendingData = await checkStatusAndParse(respuestaTrending);
     dataJsonTrending = trendingData;
     
-    console.log(window.matchMedia("(max-width: 1330px)").matches);
-    if(window.matchMedia("(max-width: 1330px)").matches) {
+    console.log(window.matchMedia("(max-width: 950px)").matches);
+    if(window.matchMedia("(max-width: 950px)").matches) {
       cargarGifoTrendingMobile(dataJsonTrending.data, 0, 25);
       validarFavoritos(0);
     } else {
@@ -29,7 +29,7 @@ async function getTrending ()
 }
 
 
-var mediaqueryList = window.matchMedia("(max-width: 1330px)");
+var mediaqueryList = window.matchMedia("(max-width: 950px)");
 mediaqueryList.addListener( function(EventoMediaQueryList) {
   if(EventoMediaQueryList.matches) {
     cargarGifoTrendingMobile(dataJsonTrending.data, 0, 25);
@@ -97,33 +97,6 @@ function cargarGifoTrendingMobile (data, desde, hasta)
     titiloGifo1.textContent = data[index].title;
     divGifos.append(imgGifo);
   }
-    // iconoFav1.style.color = "black";
-    // iconoFav2.style.color = "black";
-    // iconoFav3.style.color = "black";
-    // const imgGifo1 = div1;
-    // const imgGifo2 = div2;
-    // const imgGifo3 = div3;
-      
-    // imgGifo1.src = data[desde].images.original.url;
-    // imgGifo1.setAttribute("alt", "Gifo");
-    // imgGifo1.className = "gifos_trending_gifos";
-    // usuarioGifo1.textContent = data[desde].username;
-    // titiloGifo1.textContent = data[desde].title;
-    // divGifos.append(imgGifo1);
-  
-    // imgGifo2.src = data[desde+1].images.original.url;
-    // imgGifo2.setAttribute("alt", "Gifo");
-    // imgGifo2.className = "gifos_trending_gifos";
-    // usuarioGifo2.textContent = data[desde+1].username;
-    // titiloGifo2.textContent = data[desde+1].title;
-    // divGifos.append(imgGifo2);
-  
-    // imgGifo3.src = data[hasta].images.original.url;
-    // imgGifo3.setAttribute("alt", "Gifo");
-    // imgGifo3.className = "gifos_trending_gifos";
-    // usuarioGifo3.textContent = data[hasta].username;
-    // titiloGifo3.textContent = data[hasta].title;
-    // divGifos.append(imgGifo3);
 }
 
 botonAnt.onclick = ()=>{
